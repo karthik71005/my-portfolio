@@ -77,54 +77,56 @@ const Portfolio = () => {
       backgroundColor: '#ffffff'
     }}>
       {/* Navigation */}
-      <nav style={{
-        position: 'fixed',
-        top: 0,
-        width: '100%',
-        backgroundColor: 'rgba(255, 255, 255, 0.95)',
-        backdropFilter: 'blur(10px)',
-        borderBottom: '1px solid #e2e8f0',
-        zIndex: 1000,
-        padding: '1.5rem 0'
-      }}>
-        <div style={{
-          maxWidth: '1400px',
-          margin: '0 auto',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: '0 3rem'
-        }}>
-          <h2 style={{ 
-            margin: 0, 
-            color: '#0f172a',
-            fontSize: '1.5rem',
-            fontWeight: '700',
-            letterSpacing: '-0.025em'
-          }}>
-            KARTHIK ACHARYA
-          </h2>
-          <div style={{ display: 'flex', gap: '0.5rem' }}>
-            {['home', 'about', 'projects', 'contact'].map((section) => (
-              <button
-                key={section}
-                onClick={() => scrollToSection(section)}
-                style={navButtonStyle}
-                onMouseOver={(e) => {
-                  e.target.style.color = '#0f172a';
-                  e.target.style.backgroundColor = '#f8fafc';
-                }}
-                onMouseOut={(e) => {
-                  e.target.style.color = '#64748b';
-                  e.target.style.backgroundColor = 'transparent';
-                }}
-              >
-                {section}
-              </button>
-            ))}
-          </div>
-        </div>
-      </nav>
+    <nav style={{
+  position: 'fixed',
+  top: 0,
+  width: '100%',
+  backgroundColor: 'rgba(255, 255, 255, 0.95)',
+  backdropFilter: 'blur(10px)',
+  borderBottom: '1px solid #e2e8f0',
+  zIndex: 1000,
+  padding: '1.5rem 0'
+}}>
+  <div style={{
+    maxWidth: '1400px',
+    margin: '0 auto',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '0 3rem'
+  }}>
+    <h2 style={{ 
+      margin: 0, 
+      color: '#0f172a',
+      fontSize: '1.5rem',
+      fontWeight: '700',
+      letterSpacing: '-0.025em'
+    }}>
+      KARTHIK ACHARYA
+    </h2>
+    <div style={{ display: 'flex', gap: '0.5rem' }}>
+      {['home', 'about', 'projects', 'contact', 'uhv blog'].map((section) => (
+        <button
+          key={section}
+          onClick={() => scrollToSection(section)}
+          style={navButtonStyle}
+          onMouseOver={(e) => {
+            e.target.style.color = '#0f172a';
+            e.target.style.backgroundColor = '#f8fafc';
+          }}
+          onMouseOut={(e) => {
+            e.target.style.color = '#64748b';
+            e.target.style.backgroundColor = 'transparent';
+          }}
+        >
+          {section}
+        </button>
+      ))}
+    </div>
+  </div>
+</nav>
+
+
 
       {/* Home Section */}
       <section id="home" style={{
@@ -365,6 +367,78 @@ const Portfolio = () => {
           </div>
         </div>
       </section>
+<section id="uhv blog" style={{ padding: '100px 20px', maxWidth: '900px', margin: '0 auto' }}>
+  <h1 style={{ fontSize: '2rem', fontWeight: 'bold' }}>
+    The Holistic Perception of Harmony in Existence<br />
+    <small style={{ fontSize: '1rem', color: '#555' }}>
+      (As Defined in Universal Human Values)
+    </small>
+  </h1>
+  <hr style={{ margin: '20px 0' }} />
+
+  <h2>1. Introduction</h2>
+  <p>
+    Harmony in existence refers to the balanced, interconnected, and peaceful co-existence of all elements of nature—including individuals, society, and the natural environment. It stands as a foundational concept in Universal Human Values (UHV) and is essential for living a meaningful, purposeful, and fulfilling life.
+  </p>
+
+  <h2>2. Understanding Holistic Perception</h2>
+  <p>Holistic perception involves seeing reality as a unified whole rather than fragmented components. This approach emphasizes:</p>
+  <ul>
+    <li>Interconnectedness of All Entities</li>
+    <li>The Value of Relationships Over Isolation</li>
+    <li>Alignment Between Human Life and Natural Order</li>
+  </ul>
+  <p>It presents a contrast to materialistic worldviews focused on consumption, individualism, and competition, encouraging instead a life of balance, reflection, and mutual well-being.</p>
+
+  <h2>3. Harmony at Different Levels</h2>
+  <h3>a. Personal Level</h3>
+  <ul>
+    <li>Achieving inner peace, mental clarity, and self-awareness</li>
+    <li>Maintaining a balance between personal needs and responsibilities</li>
+    <li>Living with purpose and autonomy, guided by personal values</li>
+  </ul>
+
+  <h3>b. Family and Society Level</h3>
+  <ul>
+    <li>Cultivating mutual respect, love, and trust within relationships</li>
+    <li>Encouraging social justice, cooperation, and inclusivity</li>
+    <li>Supporting sustainable and ethical social practices</li>
+  </ul>
+
+  <h3>c. Nature and Life Level</h3>
+  <ul>
+    <li>Living in sync with natural cycles and rhythms</li>
+    <li>Utilizing resources in a responsible and sustainable manner</li>
+    <li>Recognizing and respecting the inherent order and interdependence in nature</li>
+  </ul>
+
+  <h2>4. Core Universal Human Values</h2>
+  <p>The following values form the ethical foundation for harmonious living:</p>
+  <ul>
+    <li><strong>Truth</strong> – Understanding and accepting reality as it is</li>
+    <li><strong>Love</strong> – Unconditional affection and goodwill toward all beings</li>
+    <li><strong>Peace</strong> – Inner harmony and external stability</li>
+    <li><strong>Non-Violence</strong> – Upholding dignity and avoiding harm to others</li>
+    <li><strong>Righteousness</strong> – Acting ethically and with integrity</li>
+  </ul>
+
+  <h2>5. Benefits of Harmonious Living</h2>
+  <ul>
+    <li>Reduces Inner Conflicts – Fosters mental peace and clarity</li>
+    <li>Strengthens Community Bonds – Builds compassionate and connected societies</li>
+    <li>Ensures Ecological Stability – Promotes sustainability and environmental health</li>
+    <li>Cultivates True Happiness – Leads to a fulfilling and joyful life</li>
+  </ul>
+
+  <h2>6. Conclusion</h2>
+  <p>
+    To truly understand and live in harmony requires a shift from a fragmented, ego-driven lifestyle to one that is integrated, value-oriented, and conscious. Embracing Universal Human Values allows individuals and communities to thrive in a world where wellness is collective, and prosperity is shared.
+  </p>
+
+  <div style={{ marginTop: '40px', fontWeight: 'bold' }}>
+    Authors: Abhishek H, Samarth Kini, Aadithya Nayak V, M Rohith, Karthik Acharya
+  </div>
+</section>
 
       {/* Contact Section */}
       <section id="contact" style={{
