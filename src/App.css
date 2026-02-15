@@ -137,22 +137,31 @@ body {
   }
 }
 
-@keyframes pulse-glow {
-  0% {
-    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.4);
-  }
+@keyframes blink {
 
-  70% {
-    box-shadow: 0 0 0 10px rgba(56, 189, 248, 0);
-  }
-
+  0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(56, 189, 248, 0);
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: var(--accent-color);
   }
 }
 
 .animate-fade-in {
   animation: fadeIn 1s ease-out forwards;
+}
+
+/* Typing Effect Cursor */
+.typing-cursor {
+  display: inline-block;
+  margin-left: 5px;
+  width: 3px;
+  height: 1em;
+  background-color: var(--accent-color);
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
 }
 
 /* Scroll Animation Classes */

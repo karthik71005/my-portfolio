@@ -65,6 +65,23 @@ const RevealOnScroll = ({ children }) => {
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [theme, setTheme] = useState('light');
+  const [typedName, setTypedName] = useState('');
+  const fullName = "Karthik";
+
+  // Typing effect
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index <= fullName.length) {
+        setTypedName(fullName.slice(0, index));
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 200); // Typing speed
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Initialize theme from localStorage or system preference
   useEffect(() => {
@@ -135,7 +152,7 @@ const Portfolio = () => {
         <div className="hero-bg"></div>
         <div className="hero-content animate-fade-in">
           <h1 className="hero-title">
-            Hi, I'm <span>Karthik</span>
+            Hi, I'm <span>{typedName}</span><span className="typing-cursor"></span>
           </h1>
           <div className="divider"></div>
           <p className="hero-subtitle">
