@@ -6,23 +6,24 @@ import './App.css';
 const projectsData = [
   {
     id: 1,
-    title: "E-commerce Website",
-    description: "A full-stack e-commerce platform built with React and Node.js featuring user authentication and payment integration.",
-    link: "https://github.com/karthik/ecommerce-project"
+    title: "AgentHire-X – Multi-Agent Recruitment Intelligence System",
+    description: "A hierarchical Planner–Executor–Reflector AI system built with LangChain and FAISS. Implements tool-based execution, RAG-powered semantic retrieval, and live observability dashboard for autonomous decision workflows.",
+    link: "https://github.com/karthik71005/agentic-hiring-system-AgentHire-X"
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A responsive task management application with drag-and-drop functionality using React and local storage.",
-    link: "https://github.com/karthik/task-manager"
+    title: "DetectX – Diabetes Prediction System",
+    description: "A machine learning-based healthcare system for early diabetes detection. Includes data preprocessing, model training, evaluation, and performance analysis using structured medical datasets.",
+    link: "https://github.com/GDG-PIRATES"
   },
   {
     id: 3,
-    title: "Weather Dashboard",
-    description: "A weather dashboard that displays current weather and forecasts using OpenWeatherMap API with beautiful UI.",
-    link: "https://github.com/karthik/weather-dashboard"
-  }
+    title: "Full-Stack E-Commerce Platform",
+    description: "Production-grade e-commerce system built with FastAPI, MongoDB, and React. Implements JWT auth, RBAC, Stripe payments, Cloudinary uploads, async service architecture, Redux state management, and complete admin/user workflows.",
+    link: "https://github.com/karthik71005/E-commerce-website"
+  },
 ];
+
 
 // Reusable component for scroll animations
 const RevealOnScroll = ({ children }) => {
@@ -126,7 +127,7 @@ const Portfolio = () => {
           </button>
 
           <div className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-            {['home', 'about', 'projects', 'contact', 'uhv blog'].map((section) => (
+            {['home', 'about', 'projects', 'contact','experience'].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
@@ -171,31 +172,54 @@ const Portfolio = () => {
       <section id="about" className="section">
         <RevealOnScroll>
           <div className="about-grid">
-            <div className="section-header" style={{ textAlign: 'left', marginBottom: 0 }}>
+            <div className="section-header align-left">
               <h2 className="section-title">
                 About <span>Me</span>
               </h2>
-              <div className="divider" style={{ margin: '0' }}></div>
+              <div className="divider align-left"></div>
             </div>
             <div className="about-text">
               <p>
-                I'm a passionate Computer Science Engineering student with a strong interest in web development,
-                software engineering, and emerging technologies. Currently pursuing my degree, I spend my time
-                learning new programming languages, building projects, and solving complex problems.
+                I'm a Computer Science Engineering student focused on building AI-driven systems and scalable backend architectures.
+                My core interest lies in agentic workflows, automation platforms, and designing systems that solve real-world operational problems.
               </p>
+
               <p>
-                My journey in technology started with curiosity about how websites and applications work, which
-                led me to explore frontend and backend development. I enjoy creating user-friendly applications
-                that solve real-world problems and am always eager to learn new technologies and frameworks.
+                I work with LLM-based pipelines, async APIs, and cloud databases to build production-ready applications.
+                I enjoy designing clean architectures, implementing secure authentication systems, and optimizing workflow orchestration.
               </p>
+
               <p>
-                When I'm not coding, you can find me exploring the latest tech trends, contributing to open-source
-                projects, or working on personal projects that challenge my skills and creativity.
+                Beyond development, I’m deeply interested in system design, distributed systems, and turning complex processes
+                into intelligent, reliable automation solutions.
               </p>
             </div>
           </div>
         </RevealOnScroll>
       </section>
+
+      <section id="experience" className="section">
+        <RevealOnScroll>
+          <div className="about-grid">
+            <div className="section-header align-left">
+              <h2 className="section-title">
+                Experience <span></span>
+              </h2>
+              <div className="divider align-left"></div>
+            </div>
+            <div className="about-text">
+              <h3>AI Systems Engineer – 23ML Tech Pvt. Ltd.</h3>
+              <p className="duration">Oct 2025 – Present · Remote</p>
+              <p>
+                Designed and deployed scalable backend systems and automation workflows.
+                Built production-grade APIs, implemented role-based access control,
+                webhook processing, and real-time order lifecycle management.
+              </p>
+            </div>
+          </div>
+        </RevealOnScroll>
+      </section>
+
 
       {/* Projects Section */}
       <section id="projects" className="section projects-bg">
@@ -234,95 +258,19 @@ const Portfolio = () => {
         </RevealOnScroll>
       </section>
 
-      {/* UHV Blog Section */}
-      <section id="uhv blog" className="section blog-section">
-        <RevealOnScroll>
-          <div className="blog-content">
-            <h1 className="blog-title">
-              The Holistic Perception of Harmony in Existence
-              <span className="blog-meta">(As Defined in Universal Human Values)</span>
-            </h1>
-            <div className="divider" style={{ margin: '20px 0' }}></div>
-
-            <h2>1. Introduction</h2>
-            <p>
-              Harmony in existence refers to the balanced, interconnected, and peaceful co-existence of all elements of nature—including individuals, society, and the natural environment. It stands as a foundational concept in Universal Human Values (UHV) and is essential for living a meaningful, purposeful, and fulfilling life.
-            </p>
-
-            <h2>2. Understanding Holistic Perception</h2>
-            <p>Holistic perception involves seeing reality as a unified whole rather than fragmented components. This approach emphasizes:</p>
-            <ul>
-              <li>Interconnectedness of All Entities</li>
-              <li>The Value of Relationships Over Isolation</li>
-              <li>Alignment Between Human Life and Natural Order</li>
-            </ul>
-            <p>It presents a contrast to materialistic worldviews focused on consumption, individualism, and competition, encouraging instead a life of balance, reflection, and mutual well-being.
-            </p>
-
-            <h2>3. Harmony at Different Levels</h2>
-            <h3>a. Personal Level</h3>
-            <ul>
-              <li>Achieving inner peace, mental clarity, and self-awareness</li>
-              <li>Maintaining a balance between personal needs and responsibilities</li>
-              <li>Living with purpose and autonomy, guided by personal values</li>
-            </ul>
-
-            <h3>b. Family and Society Level</h3>
-            <ul>
-              <li>Cultivating mutual respect, love, and trust within relationships</li>
-              <li>Encouraging social justice, cooperation, and inclusivity</li>
-              <li>Supporting sustainable and ethical social practices</li>
-            </ul>
-
-            <h3>c. Nature and Life Level</h3>
-            <ul>
-              <li>Living in sync with natural cycles and rhythms</li>
-              <li>Utilizing resources in a responsible and sustainable manner</li>
-              <li>Recognizing and respecting the inherent order and interdependence in nature</li>
-            </ul>
-
-            <h2>4. Core Universal Human Values</h2>
-            <p>The following values form the ethical foundation for harmonious living:</p>
-            <ul>
-              <li><strong>Truth</strong> – Understanding and accepting reality as it is</li>
-              <li><strong>Love</strong> – Unconditional affection and goodwill toward all beings</li>
-              <li><strong>Peace</strong> – Inner harmony and external stability</li>
-              <li><strong>Non-Violence</strong> – Upholding dignity and avoiding harm to others</li>
-              <li><strong>Righteousness</strong> – Acting ethically and with integrity</li>
-            </ul>
-
-            <h2>5. Benefits of Harmonious Living</h2>
-            <ul>
-              <li>Reduces Inner Conflicts – Fosters mental peace and clarity</li>
-              <li>Strengthens Community Bonds – Builds compassionate and connected societies</li>
-              <li>Ensures Ecological Stability – Promotes sustainability and environmental health</li>
-              <li>Cultivates True Happiness – Leads to a fulfilling and joyful life</li>
-            </ul>
-
-            <h2>6. Conclusion</h2>
-            <p>
-              To truly understand and live in harmony requires a shift from a fragmented, ego-driven lifestyle to one that is integrated, value-oriented, and conscious. Embracing Universal Human Values allows individuals and communities to thrive in a world where wellness is collective, and prosperity is shared.
-            </p>
-
-            <div style={{ marginTop: '40px', fontWeight: 'bold' }}>
-              Authors: Abhishek H, Samarth Kini, Aadithya Nayak V, M Rohith, Karthik Acharya
-            </div>
-          </div>
-        </RevealOnScroll>
-      </section>
 
       {/* Contact Section */}
       <section id="contact" className="section">
         <RevealOnScroll>
           <div className="contact-grid">
             <div>
-              <div className="section-header" style={{ textAlign: 'left', marginBottom: '2rem' }}>
+              <div className="section-header contact-header">
                 <h2 className="section-title">
                   Get In <span>Touch</span>
                 </h2>
-                <div className="divider" style={{ margin: '0' }}></div>
+                <div className="divider align-left"></div>
               </div>
-              <p className="contact-text" style={{ fontSize: '1.25rem', color: 'var(--text-secondary)' }}>
+              <p className="contact-desc">
                 I'm always open to discussing new opportunities and interesting projects.
               </p>
             </div>
